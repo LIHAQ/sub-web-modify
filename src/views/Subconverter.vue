@@ -30,7 +30,7 @@
               </el-form-item>
               <el-form-item label="生成类型:">
                 <el-select v-model="form.clientType" style="width: 100%">
-                  <el-option v-for="(v， k) in options.clientTypes" :key="k" :label="k" :value="v"></el-option>
+                  <el-option v-for="(v, k) in options.clientTypes" :key="k" :label="k" :value="v"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="后端地址:">
@@ -588,7 +588,7 @@ export default {
                 value: "https://raw.nameless13.com/api/public/dl/XHr0miMg/ipip.ini"
               },
               {
-                label: "无策略魅影vip分组"，
+                label: "无策略魅影vip分组",
                 value: "https://raw.nameless13.com/api/public/dl/BBnfb5lD/MAYINGVIP.ini"
               },
               {
@@ -939,7 +939,7 @@ export default {
         customClass: 'msgbox',
         showClose: false,
       })
-        。键，然后(() => {
+        .then(() => {
           window.open(basicVideo);
         });
     },
@@ -1267,12 +1267,12 @@ export default {
       data.append("sortscript", encodeURIComponent(this.uploadScript));
       data.append("filterscript", encodeURIComponent(this.uploadFilter));
       this.$axios
-        。post(configScriptBackend, data, {
+        .post(configScriptBackend, data, {
           header: {
             "Content-Type": "application/form-data; charset=utf-8"
           }
         })
-        。then(res => {
+        .then(res => {
           if (res.data.code === 0 && res.data.data !== "") {
             this.$message.success(
               "自定义JS上传成功，订阅链接已复制到剪贴板（IOS设备和Safari浏览器不支持自动复制API，需手动点击复制按钮）"
@@ -1285,25 +1285,25 @@ export default {
             this.$message.error("自定义JS上传失败: " + res.data.msg);
           }
         })
-        。catch(() => {
+        .catch(() => {
           this.$message.error("自定义JS上传失败");
         })
-        。finally(() => {
+        .finally(() => {
           this.loading2 = false;
         })
     },
     getBackendVersion() {
       this.$axios
-        。get(
+        .get(
           this.form.customBackend + "/version"
         )
-        。then(res => {
+        .then(res => {
           this.backendVersion = res.data.replace(/backend\n$/gm, "");
           this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
           let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
           b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}`);
         })
-        。catch(() => {
+        .catch(() => {
           this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
         });
     }
