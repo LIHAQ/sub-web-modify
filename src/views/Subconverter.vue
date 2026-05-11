@@ -30,7 +30,7 @@
               </el-form-item>
               <el-form-item label="生成类型:">
                 <el-select v-model="form.clientType" style="width: 100%">
-                  <el-option v-for="(v, k) in options.clientTypes" :key="k" :label="k" :value="v"></el-option>
+                  <el-option v-for="(v， k) in options.clientTypes" :key="k" :label="k" :value="v"></el-option>
                 </el-select>
               </el-form-item>
               <el-form-item label="后端地址:">
@@ -341,23 +341,23 @@ export default {
           "Shadowsocks Android(SIP008)": "sssub",
           ShadowsocksD: "ssd",
           "自动判断客户端": "auto",
-        },
+        }，
         shortTypes: {
           "v1.mk": "https://v1.mk/short",
           "d1.mk": "https://d1.mk/short",
           "dlj.tf": "https://dlj.tf/short",
-        },
+        }，
         customBackend: {
           "CM提供-负载均衡后端": "https://subapi.cmliussss.net",
           "CM提供-应急备用后端": "https://subapi.fxxk.dedyn.io",
           "肥羊提供-增强型后端": "https://url.v1.mk",
           "肥羊提供-备用后端": "https://api.v1.mk",
-        },
+        }，
         backendOptions: [
-          { value: "https://subapi.cmliussss.net" },
-          { value: "https://subapi.fxxk.dedyn.io" },
-          { value: "https://url.v1.mk" },
-          { value: "https://api.v1.mk" },
+          { value: "https://subapi.cmliussss.net" }，
+          { value: "https://subapi.fxxk.dedyn.io" }，
+          { value: "https://url.v1.mk" }，
+          { value: "https://api.v1.mk" }，
         ],
         remoteConfig: [
           {
@@ -366,15 +366,15 @@ export default {
               {
                 label: "CM_Online 默认版 识别港美地区(与Github同步)",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini"
-              },
+              }，
               {
                 label: "CM_Online_MultiCountry 识别港美地区 负载均衡(与Github同步)",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry.ini"
-              },
+              }，
               {
                 label: "CM_Online_MultiCountry_CF 识别港美地区、CloudFlareCDN 负载均衡 Worker节点专用(与Github同步)",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_MultiCountry_CF.ini"
-              },
+              }，
               {
                 label: "CM_Online_Full 识别多地区分组(与Github同步)",
                 value: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full.ini"
@@ -423,102 +423,102 @@ export default {
               {
                 label: "emby-TikTok-流媒体分组-去广告加强版",
                 value: "https://raw.githubusercontent.com/justdoiting/ClashRule/main/GeneralClashRule.ini"
-              },
+              }，
               {
                 label: "流媒体通用分组",
                 value: "https://raw.githubusercontent.com/cutethotw/ClashRule/main/GeneralClashRule.ini"
               }
             ]
-          },
+          }，
           {
             label: "ACL规则",
             options: [
               {
                 label: "ACL_默认版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online.ini"
-              },
+              }，
               {
                 label: "ACL_无测速版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoAuto.ini"
-              },
+              }，
               {
-                label: "ACL_去广告版",
+                label: "ACL_去广告版"，
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_AdblockPlus.ini"
-              },
+              }，
               {
                 label: "ACL_多国家版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_MultiCountry.ini"
-              },
+              }，
               {
                 label: "ACL_无Reject版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_NoReject.ini"
-              },
+              }，
               {
                 label: "ACL_无测速精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_NoAuto.ini"
-              },
+              }，
               {
                 label: "ACL_全分组版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full.ini"
-              },
+              }，
               {
                 label: "ACL_全分组谷歌版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Google.ini"
-              },
+              }，
               {
                 label: "ACL_全分组多模式版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_MultiMode.ini"
-              },
+              }，
               {
                 label: "ACL_全分组奈飞版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Full_Netflix.ini"
-              },
+              }，
               {
                 label: "ACL_精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini"
-              },
+              }，
               {
                 label: "ACL_去广告精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_AdblockPlus.ini"
-              },
+              }，
               {
                 label: "ACL_Fallback精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_Fallback.ini"
-              },
+              }，
               {
                 label: "ACL_多国家精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiCountry.ini"
-              },
+              }，
               {
                 label: "ACL_多模式精简版",
                 value: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini_MultiMode.ini"
               }
             ]
-          },
+          }，
           {
             label: "全网搜集规则",
             options: [
               {
                 label: "常规规则",
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG.ini"
-              },
+              }，
               {
                 label: "酷酷自用",
                 value: "https://raw.githubusercontent.com/xiaoshenxian233/cool/rule/complex.ini"
-              },
+              }，
               {
                 label: "PharosPro无测速",
                 value:
                   "https://subweb.s3.fr-par.scw.cloud/RemoteConfig/special/phaors.ini"
-              },
+              }，
               {
                 label: "分区域故障转移",
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_Area_Fallback.ini"
-              },
+              }，
               {
                 label: "分区域自动测速",
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_Area_Urltest.ini"
-              },
+              }，
               {
                 label: "分区域无自动测速",
                 value: "https://raw.githubusercontent.com/flyhigherpi/merlinclash_clash_related/master/Rule_config/ZHANG_Area_NoAuto.ini"
@@ -535,7 +535,10 @@ export default {
                 label: "lhl77全分组（定期更新）",
                 value: "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-full.ini"
               },
-              {
+                label: "lhl77简易版（定期更新）",
+                value: "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini"
+              },
+  {
                 label: "ConnersHua 神机规则 Outbound",
                 value: "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_new.ini"
               },
@@ -574,7 +577,7 @@ export default {
               {
                 label: "无策略入门推荐",
                 value: "https://raw.nameless13.com/api/public/dl/zKF9vFbb/easy.ini"
-              }，
+              },
               {
                 label: "无策略入门推荐国家分组",
                 value: "https://raw.nameless13.com/api/public/dl/E69bzCaE/easy2.ini"
@@ -584,7 +587,7 @@ export default {
                 value: "https://raw.nameless13.com/api/public/dl/XHr0miMg/ipip.ini"
               },
               {
-                label: "无策略魅影vip分组",
+                label: "无策略魅影vip分组"，
                 value: "https://raw.nameless13.com/api/public/dl/BBnfb5lD/MAYINGVIP.ini"
               },
               {
