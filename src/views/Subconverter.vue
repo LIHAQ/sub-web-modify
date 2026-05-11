@@ -801,7 +801,7 @@ export default {
         clientType: "",
         customBackend: this.getUrlParam() == "" ? "https://subapi.xmcloud.fun/" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
-        remoteConfig: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini",
+        remoteConfig: "https://raw.githubusercontent.com/cmliu/ACL4SSR/refs/heads/main/Clash/config/ACL4SSR_Online_Mini_MultiMode_CF.ini",
         excludeRemarks: "",
         includeRemarks: "",
         filename: "",
