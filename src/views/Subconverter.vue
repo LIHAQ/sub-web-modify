@@ -538,7 +538,7 @@ export default {
               {
                 label: "lhl77简易版（定期更新）",
                 value: "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini"
-              },
+              }，
               {
                 label: "ConnersHua 神机规则 Outbound",
                 value: "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_new.ini"
@@ -578,7 +578,7 @@ export default {
               {
                 label: "无策略入门推荐",
                 value: "https://raw.nameless13.com/api/public/dl/zKF9vFbb/easy.ini"
-              },
+              }，
               {
                 label: "无策略入门推荐国家分组",
                 value: "https://raw.nameless13.com/api/public/dl/E69bzCaE/easy2.ini"
@@ -790,7 +790,7 @@ export default {
       form: {
         sourceSubUrl: "",
         clientType: "",
-        customBackend: this.getUrlParam() == "" ? "https://url.v1.mk" : this.getUrlParam(),
+        customBackend: this.getUrlParam() == "" ? "https://subapi.xmcloud.fun/" : this.getUrlParam(),
         shortType: "https://v1.mk/short",
         remoteConfig: "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online.ini",
         excludeRemarks: "",
@@ -824,7 +824,7 @@ export default {
             ipv6: false
           }
         }
-      },
+      }，
       loading1: false,
       loading2: false,
       loading3: false,
@@ -898,7 +898,7 @@ export default {
           document.getElementsByTagName('body')[0].setAttribute('class', 'dark-mode');
         } //根据窗口主题来判断当前主题！
       }
-    },
+    }，
     change() {
       var zhuti = document.getElementsByTagName('body')[0].className;
       if (zhuti === 'light-mode') {
@@ -939,7 +939,7 @@ export default {
         customClass: 'msgbox',
         showClose: false,
       })
-        .then(() => {
+        。键，然后(() => {
           window.open(basicVideo);
         });
     },
@@ -1267,12 +1267,12 @@ export default {
       data.append("sortscript", encodeURIComponent(this.uploadScript));
       data.append("filterscript", encodeURIComponent(this.uploadFilter));
       this.$axios
-        .post(configScriptBackend, data, {
+        。post(configScriptBackend, data, {
           header: {
             "Content-Type": "application/form-data; charset=utf-8"
           }
         })
-        .then(res => {
+        。then(res => {
           if (res.data.code === 0 && res.data.data !== "") {
             this.$message.success(
               "自定义JS上传成功，订阅链接已复制到剪贴板（IOS设备和Safari浏览器不支持自动复制API，需手动点击复制按钮）"
@@ -1285,25 +1285,25 @@ export default {
             this.$message.error("自定义JS上传失败: " + res.data.msg);
           }
         })
-        .catch(() => {
+        。catch(() => {
           this.$message.error("自定义JS上传失败");
         })
-        .finally(() => {
+        。finally(() => {
           this.loading2 = false;
         })
     },
     getBackendVersion() {
       this.$axios
-        .get(
+        。get(
           this.form.customBackend + "/version"
         )
-        .then(res => {
+        。then(res => {
           this.backendVersion = res.data.replace(/backend\n$/gm, "");
           this.backendVersion = this.backendVersion.replace("subconverter", "SubConverter");
           let b = this.form.customBackend.indexOf("127.0.0.1") !== -1;
           b ? this.$message.success(`${this.backendVersion}` + "本地局域网自建版后端") : this.$message.success(`${this.backendVersion}`);
         })
-        .catch(() => {
+        。catch(() => {
           this.$message.error("请求SubConverter版本号返回数据失败，该后端不可用！");
         });
     }
