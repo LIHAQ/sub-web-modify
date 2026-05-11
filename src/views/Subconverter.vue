@@ -535,10 +535,11 @@ export default {
                 label: "lhl77全分组（定期更新）",
                 value: "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-full.ini"
               },
+              {
                 label: "lhl77简易版（定期更新）",
                 value: "https://raw.githubusercontent.com/lhl77/sub-ini/main/tsutsu-mini-gfw.ini"
               },
-  {
+              {
                 label: "ConnersHua 神机规则 Outbound",
                 value: "https://gist.githubusercontent.com/tindy2013/1fa08640a9088ac8652dbd40c5d2715b/raw/connershua_new.ini"
               },
